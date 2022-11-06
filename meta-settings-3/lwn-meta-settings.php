@@ -50,7 +50,21 @@ function lwn_meta_settings_menu()
 /**HTML Code for configuration page*/
 function lwn_meta_tags_html_code($tag_name, $tag_content)
 {
+    if (isset($_GET['message']) && ($_GET['message'] = 'ok')) {
+        $message_text =
+      '<div id="setting-error-settings_updated" class="notice notice-success settings-error is-dismissible">';
+        $message_text .= '<p>';
+        $message_text .= '<strong>';
+        $message_text .= __('Settings Saved', 'meta-settings-3');
+        $message_text .= '</strong>';
+        $message_text .= '</p>';
+
+        $message_text .= '</div>';
+    } else {
+        $message_text = '';
+    }
     $html = '<div class="lwn-container">';
+    $html .= $message_text;
     $html .= '<h1 class="lwn-title">';
     $html .= __('Meta Tags', 'meta-settings-3');
     $html .= '</h1>';
@@ -131,6 +145,15 @@ function lwn_save_options_to_db()
         // add to db
         update_option('lwn_meta_tag_content', $clean_content);
     }
+
+    // Redirect after saving to db
+    wp_redirect(
+        add_query_arg(
+            ['page' => 'lwn-meta-tags', 'message' => 'ok'],
+            admin_url('options-general.php')
+        )
+    );
+    exit();
 }
 
 /** Add meta tag to the head */
