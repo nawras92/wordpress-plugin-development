@@ -1,0 +1,57 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LWN Meta Tags 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-23 07:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0.3\n"
+"X-Domain: meta-settings-2"
+
+#. Description of the plugin
+msgid "Add custom meta tags from settings page"
+msgstr ""
+
+#: lwn-meta-settings.php:67
+msgid "Add your tags here"
+msgstr ""
+
+#. Name of the plugin
+msgid "LWN Meta Tags 2"
+msgstr ""
+
+#: lwn-meta-settings.php:79
+msgid "Meta Content"
+msgstr ""
+
+#: lwn-meta-settings.php:73
+msgid "Meta Name"
+msgstr ""
+
+#: lwn-meta-settings.php:55
+msgid "Meta Tags"
+msgstr ""
+
+#. Author of the plugin
+msgid "Nawras Ali"
+msgstr ""
+
+#: lwn-meta-settings.php:85
+msgid "Save"
+msgstr ""
+
+#: lwn-meta-settings.php:62
+msgid "Your current meta content is: "
+msgstr ""
+
+#: lwn-meta-settings.php:58
+msgid "Your current meta name is: "
+msgstr ""
