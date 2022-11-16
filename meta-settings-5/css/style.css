@@ -1,0 +1,43 @@
+.lwn-container {
+  background: #f4f4f4;
+  max-width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.lwn-title {
+  text-align: center;
+  border-bottom: 1rem;
+}
+
+.lwn-heading {
+  color: darkblue;
+}
+
+.lwn-form-control {
+  margin: 1rem 0;
+}
+
+.lwn-label {
+  margin: 0 1rem;
+}
+
+.lwn-button {
+  outline: none;
+  border: none;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0.8rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: green;
+  color: white;
+  border-radius: 10px;
+}
+
+.lwn-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
