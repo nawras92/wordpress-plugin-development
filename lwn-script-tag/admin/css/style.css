@@ -1,0 +1,8 @@
+.lwn-config-page {
+  background: #f4f4f4;
+  padding: 1rem;
+  border: 1px solid black;
+  max-width: 90%;
+  margin: 1rem auto;
+  border-radius: 10px;
+}
