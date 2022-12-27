@@ -25,12 +25,22 @@ function lwn_recipe_custom_post_activate_function()
     /* a function to run when the plugin is activated */
 }
 
+/** Enqueue Scripts*/
+add_action('wp_enqueue_scripts', 'lwn_recipe_public_styles');
+function lwn_recipe_public_styles()
+{
+    if (is_singular('lwn_recipe')) {
+        wp_enqueue_style('lwn_recipe_css', plugins_url('public/css/style.css', __FILE__));
+    }
+}
+
 /**Add Admin Menu*/
 require_once(LWN_RECIPE_CUSTOM_POST_PLUGIN_PATH. 'includes/admin-menus.php');
 require_once(LWN_RECIPE_CUSTOM_POST_PLUGIN_PATH. 'includes/recipe-custom-post.php');
 require_once(LWN_RECIPE_CUSTOM_POST_PLUGIN_PATH. 'includes/general-meta-box.php');
 require_once(LWN_RECIPE_CUSTOM_POST_PLUGIN_PATH. 'includes/details-meta-box.php');
 require_once(LWN_RECIPE_CUSTOM_POST_PLUGIN_PATH. 'includes/save-meta-box.php');
+require_once(LWN_RECIPE_CUSTOM_POST_PLUGIN_PATH. 'includes/add-recipe-template.php');
 
 /**Deactivate the plugin */
 register_deactivation_hook(__FILE__, 'lwn_recipe_custom_post_deactive_function');
