@@ -6,7 +6,7 @@ function lwn_recipe_custom_post_add_admin_menus()
 {
     add_options_page(
         __('LWN Recipe Plugin', 'lwn-recipe-custom-post'), // Page Title
-        __('LWN Recipes', 'google-tracking'), // Menu Title
+        __('LWN Recipes', 'lwn-recipe-custom-post'), // Menu Title
         'manage_options', // required capability
         'lwn-recipe-plugin', // Menu Slug
         'lwn_recipe_custom_post_config_page' // Config Page callback
