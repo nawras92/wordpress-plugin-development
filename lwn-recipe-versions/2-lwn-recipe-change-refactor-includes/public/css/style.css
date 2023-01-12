@@ -1,0 +1,38 @@
+.recipe-container {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  direction: rtl;
+}
+
+.recipe-meta-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.recipe-single-meta {
+  background: lightblue;
+  margin: 0.2rem;
+  padding: 0.5rem 0.3rem;
+}
+
+.recipe-text {
+  background: white;
+  padding: 1rem;
+}
+
+.recipe-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-heading {
+  font-size: 2rem;
+}
+
+.recipe-notes {
+  background: yellow;
+}

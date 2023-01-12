@@ -1,0 +1,8 @@
+
+Recipe Custom post
+
+1- title, desc, thumbnail
+2- prep time, cook time, total time, servings
+3- ingredients
+4- steps
+5- notes
