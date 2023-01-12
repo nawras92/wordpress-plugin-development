@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LWN Recipe 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lwn-recipe\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-01-11T21:55:58+03:00\n"
+"PO-Revision-Date: 2023-01-12 15:36+0300\n"
+"Language: ar_JO\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Domain: lwn-recipe\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#. Plugin Name of the plugin
+#: includes/register-recipe-type.php:9
+msgid "LWN Recipe"
+msgstr "وصفات LWN"
+
+#. Plugin URI of the plugin
+msgid "https://learnwithnaw.com/learning-path/3"
+msgstr "https://learnwithnaw.com/learning-path/3"
+
+#. Description of the plugin
+msgid "Manage your recipes easily"
+msgstr "إدارة وصفاتك بسهولة"
+
+#. Author of the plugin
+msgid "Nawras Ali"
+msgstr "نورس علي"
+
+#. Author URI of the plugin
+msgid "https://learnwithnaw.com"
+msgstr "ttps://learnwithnaw.com"
+
+#: includes/admin-menus.php:8
+msgid "LWN Recipe Plugin"
+msgstr "إضافة وصفات LWN"
+
+#: includes/admin-menus.php:9 includes/register-recipe-type.php:8
+msgid "LWN Recipes"
+msgstr "وصفات LWN"
+
+#: includes/display-recipe-template.php:37
+msgid "Prep time"
+msgstr "وقت التحضير"
+
+#: includes/display-recipe-template.php:38
+#: includes/display-recipe-template.php:42
+#: includes/display-recipe-template.php:46
+msgid "Minutes"
+msgstr "دقائق"
+
+#: includes/display-recipe-template.php:41
+msgid "Cook time"
+msgstr "وقت الطهي"
+
+#: includes/display-recipe-template.php:45
+msgid "Total time"
+msgstr "الوقت الكلي"
+
+#: includes/display-recipe-template.php:49
+#: includes/register-recipe-metabox.php:143
+msgid "Servings"
+msgstr "عدد الأشخاص"
+
+#: includes/display-recipe-template.php:52
+#: includes/register-recipe-metabox.php:167
+msgid "Meal"
+msgstr "الوجبة"
+
+#: includes/display-recipe-template.php:55
+msgid "Vegan"
+msgstr "نباتية"
+
+#: includes/register-recipe-metabox.php:10
+msgid "Recipe Ingredients"
+msgstr "مقادير الوصفة"
+
+#: includes/register-recipe-metabox.php:18
+msgid "Recipe Steps"
+msgstr "خطوات الوصفة"
+
+#: includes/register-recipe-metabox.php:26
+msgid "Recipe Info"
+msgstr "معلومات الوصفة"
+
+#: includes/register-recipe-metabox.php:95
+msgid "Short Description"
+msgstr "وصف قصير"
+
+#: includes/register-recipe-metabox.php:107
+msgid "Prep Time (in Minutes)"
+msgstr "وقت التحضير (بالدقائق)"
+
+#: includes/register-recipe-metabox.php:119
+msgid "Cook Time (in Minutes)"
+msgstr "وقت الطهي (بالدقائق)"
+
+#: includes/register-recipe-metabox.php:131
+msgid "Total Time (in Minutes)"
+msgstr "الوقت الكلي (بالدقائق)"
+
+#: includes/register-recipe-metabox.php:155
+msgid "Vegan?"
+msgstr "نباتية؟"
+
+#: includes/register-recipe-metabox.php:184
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: includes/register-recipe-taxonomy.php:13
+msgid "Recipe Type"
+msgstr "نوع الوصفة"
+
+#: includes/register-recipe-taxonomy.php:14
+msgid "Add New Recipe Type"
+msgstr "إضافة نوع وصفة جديد"
+
+#: includes/register-recipe-taxonomy.php:15
+msgid "New Recipe Type Name"
+msgstr "إضافة نوع وصفة جديد"
+
+#: includes/register-recipe-type.php:10
+msgid "Add New"
+msgstr "إضافة جديد"
+
+#: includes/register-recipe-type.php:11
+msgid "Add New Recipe"
+msgstr "إضافة وصفة جديدة"
+
+#: includes/register-recipe-type.php:12
+msgid "Edit"
+msgstr "تعديل"
+
+#: includes/register-recipe-type.php:13
+msgid "Edit LWN Recipe"
+msgstr "تعديل وصفة LWN"
+
+#: includes/register-recipe-type.php:14
+msgid "View"
+msgstr "عرض"
+
+#: includes/register-recipe-type.php:15
+msgid "View LWN Recipe"
+msgstr "عرض وصفة LWN"
+
+#: includes/register-recipe-type.php:16
+msgid "Search LWN Recipes"
+msgstr "البحث في وصفات LWN"
+
+#: includes/register-recipe-type.php:17
+msgid "No LWN Recipes Found"
+msgstr "لم يتم إيجاد وصفات LWN"
+
+#: includes/register-recipe-type.php:18
+msgid "No LWN Recipes Found in Trash"
+msgstr ""

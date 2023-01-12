@@ -1,0 +1,161 @@
+# Copyright (C) 2023 Nawras Ali
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: LWN Recipe 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lwn-recipe\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-01-11T21:55:58+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: lwn-recipe\n"
+
+#. Plugin Name of the plugin
+#: includes/register-recipe-type.php:9
+msgid "LWN Recipe"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://learnwithnaw.com/learning-path/3"
+msgstr ""
+
+#. Description of the plugin
+msgid "Manage your recipes easily"
+msgstr ""
+
+#. Author of the plugin
+msgid "Nawras Ali"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://learnwithnaw.com"
+msgstr ""
+
+#: includes/admin-menus.php:8
+msgid "LWN Recipe Plugin"
+msgstr ""
+
+#: includes/admin-menus.php:9
+#: includes/register-recipe-type.php:8
+msgid "LWN Recipes"
+msgstr ""
+
+#: includes/display-recipe-template.php:37
+msgid "Prep time"
+msgstr ""
+
+#: includes/display-recipe-template.php:38
+#: includes/display-recipe-template.php:42
+#: includes/display-recipe-template.php:46
+msgid "Minutes"
+msgstr ""
+
+#: includes/display-recipe-template.php:41
+msgid "Cook time"
+msgstr ""
+
+#: includes/display-recipe-template.php:45
+msgid "Total time"
+msgstr ""
+
+#: includes/display-recipe-template.php:49
+#: includes/register-recipe-metabox.php:143
+msgid "Servings"
+msgstr ""
+
+#: includes/display-recipe-template.php:52
+#: includes/register-recipe-metabox.php:167
+msgid "Meal"
+msgstr ""
+
+#: includes/display-recipe-template.php:55
+msgid "Vegan"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:10
+msgid "Recipe Ingredients"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:18
+msgid "Recipe Steps"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:26
+msgid "Recipe Info"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:95
+msgid "Short Description"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:107
+msgid "Prep Time (in Minutes)"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:119
+msgid "Cook Time (in Minutes)"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:131
+msgid "Total Time (in Minutes)"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:155
+msgid "Vegan?"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:184
+msgid "Notes"
+msgstr ""
+
+#: includes/register-recipe-taxonomy.php:13
+msgid "Recipe Type"
+msgstr ""
+
+#: includes/register-recipe-taxonomy.php:14
+msgid "Add New Recipe Type"
+msgstr ""
+
+#: includes/register-recipe-taxonomy.php:15
+msgid "New Recipe Type Name"
+msgstr ""
+
+#: includes/register-recipe-type.php:10
+msgid "Add New"
+msgstr ""
+
+#: includes/register-recipe-type.php:11
+msgid "Add New Recipe"
+msgstr ""
+
+#: includes/register-recipe-type.php:12
+msgid "Edit"
+msgstr ""
+
+#: includes/register-recipe-type.php:13
+msgid "Edit LWN Recipe"
+msgstr ""
+
+#: includes/register-recipe-type.php:14
+msgid "View"
+msgstr ""
+
+#: includes/register-recipe-type.php:15
+msgid "View LWN Recipe"
+msgstr ""
+
+#: includes/register-recipe-type.php:16
+msgid "Search LWN Recipes"
+msgstr ""
+
+#: includes/register-recipe-type.php:17
+msgid "No LWN Recipes Found"
+msgstr ""
+
+#: includes/register-recipe-type.php:18
+msgid "No LWN Recipes Found in Trash"
+msgstr ""
