@@ -15,9 +15,10 @@
  * Update URI:        https://learnwithnaw.com/learning-path/
  */
 
-// Define Plugin url
 
+// Define Plugin url
 define('LWN_RECIPE_PLUGIN_PATH', plugin_dir_path((__FILE__)));
+
 
 /**Activate the plugin */
 register_activation_hook(__FILE__, 'lwn_recipe_activate_function');
@@ -26,7 +27,7 @@ function lwn_recipe_activate_function()
     /* a function to run when the plugin is activated */
 }
 
-// Load translations
+// Load translation
 add_action('init', 'lwn_recipe_load_translations');
 function lwn_recipe_load_translations()
 {
@@ -38,7 +39,7 @@ add_action('wp_enqueue_scripts', 'lwn_recipe_public_styles');
 function lwn_recipe_public_styles()
 {
     if (is_singular('lwn_recipe')) {
-        wp_enqueue_style('lwn_recipe_css', plugins_url('public/css/style.min.css', __FILE__));
+        wp_enqueue_style('lwn-frontend-styles', plugins_url('/public/css/style.min.css', __FILE__));
     }
 }
 
