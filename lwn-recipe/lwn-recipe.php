@@ -51,6 +51,7 @@ require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-type.php';
 require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-taxonomy.php';
 require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-metabox.php';
 require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-sidebar.php';
+require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-widgets.php';
 require_once LWN_RECIPE_PLUGIN_PATH. 'includes/display-recipe-template.php';
 
 /**Deactivate the plugin */
