@@ -46,12 +46,11 @@ function lwn_recipe_public_styles()
 }
 
 /**Add Admin Menu*/
-require_once LWN_RECIPE_PLUGIN_PATH. 'includes/admin-menus.php';
-require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-type.php';
-require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-taxonomy.php';
-require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-metabox.php';
-require_once LWN_RECIPE_PLUGIN_PATH. 'includes/register-sidebar.php';
-require_once LWN_RECIPE_PLUGIN_PATH. 'includes/display-recipe-template.php';
+require_once(LWN_RECIPE_PLUGIN_PATH. 'includes/admin-menus.php');
+require_once(LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-type.php');
+require_once(LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-taxonomy.php');
+require_once(LWN_RECIPE_PLUGIN_PATH. 'includes/register-recipe-metabox.php');
+require_once(LWN_RECIPE_PLUGIN_PATH. 'includes/display-recipe-template.php');
 
 /**Deactivate the plugin */
 register_deactivation_hook(__FILE__, 'lwn_recipe_deactive_function');
