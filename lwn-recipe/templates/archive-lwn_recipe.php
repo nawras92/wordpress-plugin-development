@@ -59,7 +59,9 @@
        </div>
 
        <!-- LWN Recipe Sidebar -->
-       <div class="lwn-recipe-sidebar">Sidebar</div>
+      <?php if (is_active_sidebar('lwn-recipe-sidebar')) {
+        dynamic_sidebar('lwn-recipe-sidebar');
+      } ?>
      </div>
    
    <?php get_footer(); ?>
