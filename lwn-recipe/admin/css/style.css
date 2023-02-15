@@ -1,0 +1,40 @@
+/* Help Tabs */
+.lwn-recipe-help-tab {
+  background: #f4f4f4;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+}
+.lwn-recipe-help-tab-text {
+  margin-bottom: 1rem;
+}
+.lwn-recipe-help-tab-link,
+.lwn-recipe-admin-link {
+  display: inline-block;
+  background: indigo;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  margin: 0.1rem;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.lwn-recipe-help-tab-link:hover,
+.lwn-recipe-admin-link:hover {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Help Sidebar */
+.lwn-recipe-help-sidebar-text {
+  margin: 1rem auto;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Config Page */
+.lwn-recipe-admin-container {
+  max-width: 90%;
+  margin: 1rem auto;
+}
+.lwn-recipe-admin-header {
+  text-align: center;
+}
