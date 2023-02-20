@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-02-15T10:50:57+03:00\n"
+"POT-Creation-Date: 2023-02-20T17:10:47+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: lwn-recipe\n"
@@ -68,36 +68,36 @@ msgstr ""
 msgid "How to check all recipes in the frontend?"
 msgstr ""
 
-#: admin/admin-ui.php:54
+#: admin/admin-ui.php:51
 msgid "Go to:"
 msgstr ""
 
-#: admin/admin-ui.php:59
+#: admin/admin-ui.php:58
 msgid "All Recipes URL"
 msgstr ""
 
-#: admin/admin-ui.php:69
+#: admin/admin-ui.php:68
 msgid "Customized Sidebar"
 msgstr ""
 
-#: admin/admin-ui.php:72
+#: admin/admin-ui.php:71
 msgid "You can add your customized Sidebar to Recipe pages. Check it in the widgets section!"
 msgstr ""
 
-#: admin/admin-ui.php:82
+#: admin/admin-ui.php:81
 msgid "Customized Widgets"
 msgstr ""
 
-#: admin/admin-ui.php:85
+#: admin/admin-ui.php:84
 msgid "There are two recipe widgets; the first is \"Lwn Latest Recipes\", and the second one is \"LWN Recipe Types\". You can check them in the widgets section."
 msgstr ""
 
-#: admin/admin-ui.php:95
+#: admin/admin-ui.php:94
 msgid "Useful Links"
 msgstr ""
 
-#: admin/admin-ui.php:98
-#: admin/admin-ui.php:203
+#: admin/admin-ui.php:97
+#: admin/admin-ui.php:207
 msgid "If interested, you can learn more about plugin development, and how to make similar plugins here."
 msgstr ""
 
@@ -105,45 +105,45 @@ msgstr ""
 msgid "Wordpress Development Learning Path"
 msgstr ""
 
-#: admin/admin-ui.php:114
-#: admin/admin-ui.php:212
+#: admin/admin-ui.php:115
+#: admin/admin-ui.php:216
 msgid "Check Youtube Videos"
 msgstr ""
 
-#: admin/admin-ui.php:122
-#: admin/admin-ui.php:215
+#: admin/admin-ui.php:124
+#: admin/admin-ui.php:219
 msgid "Code Repo."
 msgstr ""
 
-#: admin/admin-ui.php:140
+#: admin/admin-ui.php:139
 msgid "What is this plugin?"
 msgstr ""
 
-#: admin/admin-ui.php:145
+#: admin/admin-ui.php:144
 msgid "What is the purpose?"
 msgstr ""
 
-#: admin/admin-ui.php:150
+#: admin/admin-ui.php:149
 msgid "Documentation"
 msgstr ""
 
-#: admin/admin-ui.php:154
+#: admin/admin-ui.php:156
 msgid "Ask for help at: help@LearnWithNaw.net"
 msgstr ""
 
-#: admin/admin-ui.php:162
+#: admin/admin-ui.php:166
 msgid "LWN Recipes helps users to manage their recipes, and display them in custom templates."
 msgstr ""
 
-#: admin/admin-ui.php:168
+#: admin/admin-ui.php:172
 msgid "LWN Recipes also allows users to add custom recipes widgets and sidebar to their website."
 msgstr ""
 
-#: admin/admin-ui.php:186
-msgid "LWN Recipes was created in intention to teach developers how to make a professional, yet simple WordPres plugin."
+#: admin/admin-ui.php:190
+msgid "LWN Recipes was created with the intention of teaching developers how to make a professional, yet simple WordPress plugin."
 msgstr ""
 
-#: admin/admin-ui.php:209
+#: admin/admin-ui.php:213
 msgid "WordPress Development Learning Path"
 msgstr ""
 
@@ -159,38 +159,50 @@ msgstr ""
 msgid "Recipe Info"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:95
+#: includes/register-recipe-metabox.php:61
+msgid "Breakfast"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:62
+msgid "Lunch"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:63
+msgid "Dinner"
+msgstr ""
+
+#: includes/register-recipe-metabox.php:70
 msgid "Short Description"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:107
+#: includes/register-recipe-metabox.php:82
 msgid "Prep Time (in Minutes)"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:119
+#: includes/register-recipe-metabox.php:94
 msgid "Cook Time (in Minutes)"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:131
+#: includes/register-recipe-metabox.php:106
 msgid "Total Time (in Minutes)"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:143
+#: includes/register-recipe-metabox.php:118
 #: templates/single-lwn_recipe.php:38
 msgid "Servings"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:155
+#: includes/register-recipe-metabox.php:130
 #: templates/single-lwn_recipe.php:108
 msgid "Vegan?"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:167
+#: includes/register-recipe-metabox.php:142
 #: templates/single-lwn_recipe.php:95
 msgid "Meal"
 msgstr ""
 
-#: includes/register-recipe-metabox.php:184
+#: includes/register-recipe-metabox.php:161
 #: templates/single-lwn_recipe.php:163
 msgid "Notes"
 msgstr ""

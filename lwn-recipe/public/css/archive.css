@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Recipe Container */
+/* Recipe Archive Page Container */
 .lwn-recipe-container {
   display: block;
   max-width: 90%;
@@ -18,14 +13,18 @@
   }
 }
 
+/* The Recipes Content - All recipes */
 .lwn-recipe-content {
   max-width: 100%;
 }
 @media only screen and (min-width: 767px) {
   .lwn-recipe-content {
     max-width: 64%;
+    margin: 0 10px;
   }
 }
+
+/* The Recipe Card */
 .lwn-recipe-card {
   margin: 1rem auto;
   display: flex;
@@ -38,33 +37,48 @@
 @media only screen and (min-width: 767px) {
   .lwn-recipe-card {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: stretch;
   }
 }
 
+/* The Recipe Thumbnail */
 .lwn-recipe-thumbnail img {
-  display: block;
+  display: inline-block;
   max-width: 100%;
-  max-height: auto;
+  height: 100%;
 }
 
 @media only screen and (min-width: 767px) {
   .lwn-recipe-thumbnail {
-    max-width: 30%;
+    flex: 2 0 10%;
   }
 }
 
-.lwn-recipe-content {
+/* The Recipe Content */
+.the-recipe-content {
   padding: 1rem;
   text-align: center;
 }
+@media only screen and (min-width: 767px) {
+  .the-recipe-content {
+    flex: 2 0 60%;
+    align-self: center;
+  }
+}
 
-.lwn-recipe-title {
+/* Recipe Title */
+.lwn-recipe-title a {
   font-size: 1.4rem;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
+.lwn-recipe-title a:hover {
+  text-decoration: underline;
+}
+
+/* Recipe Text */
 .lwn-recipe-text {
   font-size: 0.8rem;
   margin-bottom: 1rem;
@@ -73,6 +87,8 @@
 /* Widget links */
 .lwn-recipe-list {
   background: #f4f4f4;
+  list-style: none;
+  margin: 0;
 }
 .lwn-recipe-item {
   padding: 0.5rem 0.7rem;
@@ -92,7 +108,6 @@
 
 /* sidebar */
 .lwn-recipe-sidebar {
-  background: #f4f4f4;
   padding: 1rem 0.5rem;
   max-width: 100%;
 }
@@ -104,7 +119,7 @@
 .lwn-recipe-widget {
   background: white;
   border-radius: 10px;
-  text-shadow: 0px 10px 10 #ccc;
+  text-shadow: 0px 10px 10px #ccc;
   padding: 10px;
   margin-bottom: 1rem;
 }
@@ -135,7 +150,8 @@
 }
 .lwn-recipe-pagination a {
   display: inline-block;
-  background: pink;
+  background: green;
+  color: white;
   font-weight: bold;
   padding: 0.5rem 0.8rem;
   text-decoration: none;

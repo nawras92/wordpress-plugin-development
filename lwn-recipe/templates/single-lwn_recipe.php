@@ -125,7 +125,7 @@
         <div class="lwn-recipe-ingredients-and-steps">
 
           <!-- Ingredients -->
-          <div class="lwn-recipe-section lwn-recipe-box-with-50">
+          <div class="lwn-recipe-section lwn-recipe-box-width-50">
             <div class="lwn-recipe-section-title">
               <h3>
                 <?php _e('Ingredients', 'lwn-recipe'); ?>
@@ -141,7 +141,7 @@
           </div>
 
           <!-- Steps -->
-          <div class="lwn-recipe-section lwn-recipe-box-with-50">
+          <div class="lwn-recipe-section lwn-recipe-box-width-50">
             <div class="lwn-recipe-section-title">
               <h3>
                 <?php _e('Steps', 'lwn-recipe'); ?>

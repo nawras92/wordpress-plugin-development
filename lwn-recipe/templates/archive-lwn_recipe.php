@@ -12,7 +12,7 @@
         <?php $paged = get_query_var('paged') ? get_query_var('paged') : 1; ?>
          <?php $args = [
            'post_type' => 'lwn_recipe',
-           'posts_per_page' => 4,
+           'posts_per_page' => 10,
            'paged' => $paged,
          ]; ?>
          <?php $the_recipes = new WP_Query($args); ?>
@@ -24,7 +24,7 @@
              <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title() .
   ' thumbnail'; ?>" />
            </div>
-           <div class="the_recipe_content">
+           <div class="the-recipe-content">
              <h3 class="lwn-recipe-title">
                <a class="lwn-recipe-link" href="<?php the_permalink(); ?>">
                  <?php the_title(); ?>
@@ -44,7 +44,7 @@
          <?php } ?>
          <?php } ?>
 
-         <div class="lw-recipe-pagination">
+         <div class="lwn-recipe-pagination">
            <?php echo next_posts_link(
              __('Older Recipes', 'lwn-recipe'),
              $the_recipes->max_num_pages

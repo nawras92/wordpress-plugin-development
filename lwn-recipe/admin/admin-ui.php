@@ -99,7 +99,7 @@ function lwn_recipe_config_page()
           'lwn-recipe'
         ); ?>
       </p>
-      <a class="lwn-recipe-admin-link" href="https://learnwithnaw.com/learning-path/3"
+        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(WORDPRESS_LP); ?>"
                                        target="_blank"
                                        rel="noreferrer noopener"
                                        >
@@ -108,7 +108,7 @@ function lwn_recipe_config_page()
                                          'lwn-recipe'
                                        ); ?>
       </a>
-      <a class="lwn-recipe-admin-link" href="https://www.youtube.com/playlist?list=PLt0HRIA9i35sTfR5hwaHkHdnAtK441aU2"
+        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(YOUTUBE_LINK) ?>"
                                        target="_blank"
                                        rel="noreferrer noopener"
                                        >
@@ -117,7 +117,7 @@ function lwn_recipe_config_page()
                                          'lwn-recipe'
                                        ); ?>
       </a>
-      <a class="lwn-recipe-admin-link" href="https://github.com/nawras92/wordpress-plugin-development"
+        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(GIT_CODE) ?>"
                                        target="_blank"
                                        rel="noreferrer noopener"
                                        >
@@ -188,7 +188,7 @@ function lwn_recipe_help_tab_2()
 <div class="lwn-recipe-help-tab">
      <p class="lwn-recipe-help-tab-text">
        <?php _e(
-         'LWN Recipes was created in intention to teach developers how to make a professional, yet simple WordPres plugin.',
+         'LWN Recipes was created with the intention of teaching developers how to make a professional, yet simple WordPress plugin.',
          'lwn-recipe'
        ); ?>
      </p>
@@ -209,13 +209,13 @@ function lwn_recipe_help_tab_3()
          'lwn-recipe'
        ); ?>
      </p>
-     <a class="lwn-recipe-help-tab-link" href="https://learnwithnaw.com/learning-path/3" target="_blank" rel="noreferrer noopener">
+       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(WORDPRESS_LP) ?>" target="_blank" rel="noreferrer noopener">
        <?php _e('WordPress Development Learning Path', 'lwn-recipe'); ?>
      </a>
-     <a class="lwn-recipe-help-tab-link" href="https://www.youtube.com/playlist?list=PLt0HRIA9i35sTfR5hwaHkHdnAtK441aU2" target="_blank" rel="noreferrer noopener">
+       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(YOUTUBE_LINK) ?>" target="_blank" rel="noreferrer noopener">
        <?php _e('Check Youtube Videos', 'lwn-recipe'); ?>
      </a>
-     <a class="lwn-recipe-help-tab-link" href="https://github.com/nawras92/wordpress-plugin-development" target="_blank" rel="noreferrer noopener">
+       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(GIT_CODE); ?>" target="_blank" rel="noreferrer noopener">
        <?php _e('Code Repo.', 'lwn-recipe'); ?>
      </a>
 

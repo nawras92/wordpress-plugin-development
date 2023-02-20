@@ -29,3 +29,15 @@ function lwn_recipe_init()
   ];
   register_post_type('lwn_recipe', $args);
 }
+
+// Sanitize Title
+add_filter('title_save_pre', 'lwn_recipe_sanitize_title');
+function lwn_recipe_sanitize_title($title)
+{
+  global $post;
+  if (isset($post) && $post->post_type === 'lwn_recipe') {
+    $sanitized_title = wp_kses($title, ['strong' => []]);
+    return $sanitized_title;
+  }
+  return $title;
+}

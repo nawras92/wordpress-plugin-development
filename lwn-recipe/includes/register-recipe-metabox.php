@@ -34,27 +34,34 @@ function lwn_recipe_register_metabox()
 // Steps Metabox
 function lwn_recipe_display_recipe_steps_metabox($recipe)
 {
+    wp_nonce_field('lwn_recipe_metabox_steps', 'lwn_recipe_metabox_steps_field');
     $steps = get_post_meta($recipe->ID, 'lwn_recipe_steps', true);
     echo  wp_editor(($steps), 'lwn-recipe-steps-editor', $settings = array('textarea_name'=>'lwn_recipe_steps'));
 }
 // Ingredients Metabox
 function lwn_recipe_display_recipe_ingredients_metabox($recipe)
 {
+    wp_nonce_field('lwn_recipe_metabox_ingredients', 'lwn_recipe_metabox_ingredients_field');
     $ingredients = get_post_meta($recipe->ID, 'lwn_recipe_ingredients', true);
     echo  wp_editor(($ingredients), 'lwn-recipe-ingredients-editor', $settings = array('textarea_name'=>'lwn_recipe_ingredients'));
 }
 // General Recipe Metabox
 function lwn_recipe_display_recipe_metabox($recipe)
 {
-    $notes = get_post_meta($recipe->ID, 'lwn_recipe_notes', true);
-    $desc = get_post_meta($recipe->ID, 'lwn_recipe_desc', true);
-    $prep_time =  get_post_meta($recipe->ID, 'lwn_recipe_prep_time', true);
-    $cook_time =  get_post_meta($recipe->ID, 'lwn_recipe_cook_time', true);
-    $total_time =  get_post_meta($recipe->ID, 'lwn_recipe_total_time', true);
-    $servings =  get_post_meta($recipe->ID, 'lwn_recipe_servings', true);
-    $vegan =  get_post_meta($recipe->ID, 'lwn_recipe_vegan', true);
-    $meal =  get_post_meta($recipe->ID, 'lwn_recipe_meal', true);
-    $meals = array('Breakfast', 'Lunch', 'Dinner');
+    wp_nonce_field('lwn_recipe_metabox_info', 'lwn_recipe_metabox_info_field');
+    $notes = esc_html(get_post_meta($recipe->ID, 'lwn_recipe_notes', true));
+    $desc = esc_html(get_post_meta($recipe->ID, 'lwn_recipe_desc', true));
+    $prep_time =  absint(get_post_meta($recipe->ID, 'lwn_recipe_prep_time', true));
+    $cook_time =  absint(get_post_meta($recipe->ID, 'lwn_recipe_cook_time', true));
+    $total_time =  absint(get_post_meta($recipe->ID, 'lwn_recipe_total_time', true));
+    $servings =  absint(get_post_meta($recipe->ID, 'lwn_recipe_servings', true));
+    $vegan =  esc_html(get_post_meta($recipe->ID, 'lwn_recipe_vegan', true));
+    $meal =  esc_html(get_post_meta($recipe->ID, 'lwn_recipe_meal', true));
+    $meals = array(
+        'Breakfast' => __('Breakfast', 'lwn-recipe'),
+        'Lunch' => __('Lunch', 'lwn-recipe'),
+        'Dinner' => __('Dinner', 'lwn-recipe'),
+    );
 
 
     echo "<table>";
@@ -65,7 +72,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<textarea type='text' name='lwn_recipe_desc'>";
-    echo esc_html($desc);
+    echo $desc;
     echo "</textarea>";
     echo "</td>";
 
@@ -77,7 +84,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<input type='number' name='lwn_recipe_prep_time' value='";
-    echo esc_html($prep_time);
+    echo $prep_time;
     echo "' />";
     echo "</td>";
 
@@ -89,7 +96,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<input type='number' name='lwn_recipe_cook_time' value='";
-    echo esc_html($cook_time);
+    echo $cook_time;
     echo "' />";
     echo "</td>";
 
@@ -101,7 +108,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<input type='number' name='lwn_recipe_total_time' value='";
-    echo esc_html($total_time);
+    echo $total_time;
     echo "' />";
     echo "</td>";
 
@@ -113,7 +120,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<input type='number' name='lwn_recipe_servings' value='";
-    echo esc_html($servings);
+    echo $servings;
     echo "' />";
     echo "</td>";
 
@@ -125,7 +132,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<input type='checkbox' name='lwn_recipe_vegan' value='";
-    echo esc_html($vegan);
+    echo $vegan;
     echo "' " . checked('on', $vegan, true) . '/>';
     echo "</td>";
 
@@ -137,10 +144,12 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<select name='lwn_recipe_meal'>";
-    foreach ($meals as $m) {
-        echo "<option ". selected($m, $meal)   .">";
-        echo esc_html($m);
-        echo "</option>";
+    foreach ($meals as $mealKey => $mealValue) {
+     ?>
+     <option value="<?php echo $mealKey ?>" <?php selected($mealKey, $meal) ?> >
+           <?php echo $mealValue ?>
+        </option> 
+    <?php
     }
 
     echo "</select>";
@@ -154,7 +163,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
 
     echo "<td>";
     echo "<textarea type='text' name='lwn_recipe_notes'>";
-    echo esc_html($notes);
+    echo $notes;
     echo "</textarea>";
     echo "</td>";
 
@@ -165,6 +174,21 @@ function lwn_recipe_display_recipe_metabox($recipe)
 add_action('save_post_lwn_recipe', 'lwn_recipe_save_recipe_meta');
 function lwn_recipe_save_recipe_meta($post_id)
 {
+    // Nonce Fields
+    $stepsNonce = $_POST['lwn_recipe_metabox_steps_field']; 
+    $ingredientsNonce = $_POST['lwn_recipe_metabox_ingredients_field']; 
+    $infoNonce = $_POST['lwn_recipe_metabox_info_field']; 
+    //Verify steps nonce
+    if(!isset($stepsNonce) || !wp_verify_nonce($stepsNonce, 'lwn_recipe_metabox_steps') ){
+        return;
+    }
+    if(!isset($ingredientsNonce) || !wp_verify_nonce($ingredientsNonce, 'lwn_recipe_metabox_ingredients') ){
+        return;
+    }
+    if(!isset($infoNonce) || !wp_verify_nonce($infoNonce, 'lwn_recipe_metabox_info') ){
+        return;
+    }
+
     if (isset($_POST['lwn_recipe_prep_time'])) {
         update_post_meta(
             $post_id,
@@ -201,19 +225,9 @@ function lwn_recipe_save_recipe_meta($post_id)
         );
     }
     if (isset($_POST['lwn_recipe_ingredients'])) {
-        /* update_post_meta( */
-        /*     $post_id, */
-        /*     'lwn_recipe_ingredients', */
-        /*     sanitize_text_field($_POST['lwn_recipe_ingredients']) */
-        /* ); */
         update_post_meta($post_id, 'lwn_recipe_ingredients', wp_kses_post($_POST['lwn_recipe_ingredients']));
     }
     if (isset($_POST['lwn_recipe_steps'])) {
-        /* update_post_meta( */
-        /*     $post_id, */
-        /*     'lwn_recipe_steps', */
-        /*     sanitize_text_field($_POST['lwn_recipe_steps']) */
-        /* ); */
         update_post_meta($post_id, 'lwn_recipe_steps', wp_kses_post($_POST['lwn_recipe_steps']));
     }
     if (isset($_POST['lwn_recipe_notes'])) {
