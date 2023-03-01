@@ -49,9 +49,9 @@ function lwn_recipe_config_page()
       </h3>
       <p class="lwn-recipe-admin-text">
         <?php _e('Go to:', 'lwn-recipe'); ?>
-        <a class="lwn-recipe-admin-link" href="<?php echo get_post_type_archive_link(
+        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(get_post_type_archive_link(
           'lwn_recipe'
-        ); ?>" target="_blank"
+        )); ?>" target="_blank"
                rel="noreferrer noopener"
                >
 
