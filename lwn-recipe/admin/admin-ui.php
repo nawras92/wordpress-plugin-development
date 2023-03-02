@@ -4,11 +4,11 @@ add_action('admin_menu', 'lwn_recipe_add_admin_menus');
 function lwn_recipe_add_admin_menus()
 {
   $options_page = add_options_page(
-    __('LWN Recipe Plugin', 'lwn-recipe'), // Page Title
-    __('LWN Recipes', 'lwn-recipe'), // Menu Title
-    'manage_options', // required capability
-    'lwn-recipe-plugin', // Menu Slug
-    'lwn_recipe_config_page' // Config Page callback
+    __('LWN Recipe Plugin', 'lwn-recipe'),
+    __('LWN Recipes', 'lwn-recipe'),
+    'manage_options',
+    'lwn-recipe-plugin',
+    'lwn_recipe_config_page'
   );
 
   add_action('load-' . $options_page, 'lwn_recipe_set_help_tabs');
