@@ -14,21 +14,14 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-// Help Tabs
+// Define Plugin url
+define('LWN_RECIPE_PLUGIN_PATH', plugin_dir_path(__FILE__));
+
+// Help Tabs Constants
 define('LWN_RECIPE_YOUTUBE_LINK', "https://www.youtube.com/playlist?list=PLt0HRIA9i35sTfR5hwaHkHdnAtK441aU2");
 define('LWN_RECIPE_GIT_CODE', "https://github.com/nawras92/wordpress-plugin-development");
 define('LWN_RECIPE_WORDPRESS_LP', "https://learnwithnaw.com/learning-path/3");
 define('LWN_RECIPE_HELP_EMAIL', "help@learnwithnaw.net");
-
-// Define Plugin url
-define('LWN_RECIPE_PLUGIN_PATH', plugin_dir_path(__FILE__));
-
-/**Activate the plugin */
-register_activation_hook(__FILE__, 'lwn_recipe_activate_function');
-function lwn_recipe_activate_function()
-{
-  /* a function to run when the plugin is activated */
-}
 
 // Load translations
 add_action('init', 'lwn_recipe_load_translations');
@@ -41,7 +34,7 @@ function lwn_recipe_load_translations()
   );
 }
 
-/** Enqueue Admin Styles */
+// Enqueue Admin Styles
 add_action('admin_enqueue_scripts', 'lwn_recipe_admin_styles');
 function lwn_recipe_admin_styles()
 {
@@ -51,7 +44,7 @@ function lwn_recipe_admin_styles()
   );
 }
 
-/** Enqueue Front End Styles */
+// Enqueue Front End Styles
 add_action('wp_enqueue_scripts', 'lwn_recipe_public_styles');
 function lwn_recipe_public_styles()
 {
@@ -69,7 +62,7 @@ function lwn_recipe_public_styles()
   }
 }
 
-/**Add Admin Menu*/
+// Include Files
 require_once LWN_RECIPE_PLUGIN_PATH . 'admin/admin-config.php';
 require_once LWN_RECIPE_PLUGIN_PATH . 'admin/admin-ui.php';
 require_once LWN_RECIPE_PLUGIN_PATH . 'includes/register-recipe-type.php';
@@ -78,10 +71,3 @@ require_once LWN_RECIPE_PLUGIN_PATH . 'includes/register-recipe-metabox.php';
 require_once LWN_RECIPE_PLUGIN_PATH . 'includes/register-sidebar.php';
 require_once LWN_RECIPE_PLUGIN_PATH . 'includes/register-widgets.php';
 require_once LWN_RECIPE_PLUGIN_PATH . 'includes/display-recipe-template.php';
-
-/**Deactivate the plugin */
-register_deactivation_hook(__FILE__, 'lwn_recipe_deactive_function');
-function lwn_recipe_deactive_function()
-{
-  // a function to run when the plugin is deactivated
-}
