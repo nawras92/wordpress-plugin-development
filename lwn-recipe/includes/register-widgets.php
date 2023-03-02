@@ -33,19 +33,19 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
 
     echo $args['before_widget'];
     echo $args['before_title'];
-    echo $widget_title;
+    echo esc_html($widget_title);
     echo $args['after_title'];
 
     // Display Recipe Types
     echo "<ul class='lwn-recipe-list'>";
     foreach ($recipe_types as $recipe_type) {
       $recipe_type_link = get_term_link($recipe_type);
-      $recipe_type_name = esc_html($recipe_type->name);
+      $recipe_type_name = $recipe_type->name;
       echo "<li class='lwn-recipe-item'>";
       echo "<a class='lwn-recipe-link' href='";
       echo esc_url($recipe_type_link);
       echo "'>";
-      echo $recipe_type_name;
+      echo esc_html($recipe_type_name);
       echo '</a>';
       echo '</li>';
     }
@@ -68,7 +68,7 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
 
     <!-- Widget Input: Title -->
     <p>
-    <label for="<?php echo $this->get_field_id('widget_title'); ?>">
+    <label for="<?php esc_attr_e($this->get_field_id('widget_title')); ?>">
         <?php _e('Widget Title', 'lwn-recipe'); ?> 
     </label>
     <input type="text" 
@@ -80,13 +80,13 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
 
     <!-- Widget Input: hide empty -->
     <p>
-    <label for="<?php echo $this->get_field_id('hide_empty'); ?>">
+    <label for="<?php esc_attr_e($this->get_field_id('hide_empty')); ?>">
         <?php _e('Hide Empty Types', 'lwn-recipe'); ?> 
     </label>
     <input type="checkbox" 
            id="<?php esc_attr_e($this->get_field_id('hide_empty')); ?>"
            name="<?php esc_attr_e($this->get_field_name('hide_empty')); ?>"
-           <?php checked($hide_type); ?>
+           <?php checked($hide_empty); ?>
     />
    </p>
 
@@ -133,7 +133,7 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
 
     echo $args['before_widget'];
     echo $args['before_title'];
-    echo $widget_title;
+    echo esc_html($widget_title);
     echo $args['after_title'];
 
     // Display Latest Recipes
@@ -178,7 +178,7 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
 
     <!-- Widget Input: Title -->
     <p>
-    <label for="<?php echo $this->get_field_id('widget_title'); ?>">
+    <label for="<?php echo esc_attr_e($this->get_field_id('widget_title')); ?>">
         <?php _e('Widget Title', 'lwn-recipe'); ?> 
     </label>
     <input type="text" 
@@ -190,7 +190,7 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
 
     <!-- Widget Input: Number of recipes -->
     <p>
-    <label for="<?php echo $this->get_field_id('number_of_recipes'); ?>">
+    <label for="<?php esc_attr_e($this->get_field_id('number_of_recipes')); ?>">
         <?php _e('Number of recipes', 'lwn-recipe'); ?> 
     </label>
     <input type="text" 
