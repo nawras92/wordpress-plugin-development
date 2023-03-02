@@ -15,10 +15,10 @@
  */
 
 // Help Tabs
-define('YOUTUBE_LINK', "https://www.youtube.com/playlist?list=PLt0HRIA9i35sTfR5hwaHkHdnAtK441aU2");
-define('GIT_CODE', "https://github.com/nawras92/wordpress-plugin-development");
-define('WORDPRESS_LP', "https://learnwithnaw.com/learning-path/3");
-define('HELP_EMAIL', "help@learnwithnaw.net");
+define('LWN_RECIPE_YOUTUBE_LINK', "https://www.youtube.com/playlist?list=PLt0HRIA9i35sTfR5hwaHkHdnAtK441aU2");
+define('LWN_RECIPE_GIT_CODE', "https://github.com/nawras92/wordpress-plugin-development");
+define('LWN_RECIPE_WORDPRESS_LP', "https://learnwithnaw.com/learning-path/3");
+define('LWN_RECIPE_HELP_EMAIL', "help@learnwithnaw.net");
 
 // Define Plugin url
 define('LWN_RECIPE_PLUGIN_PATH', plugin_dir_path(__FILE__));

@@ -99,7 +99,7 @@ function lwn_recipe_config_page()
           'lwn-recipe'
         ); ?>
       </p>
-        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(WORDPRESS_LP); ?>"
+        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(LWN_RECIPE_WORDPRESS_LP); ?>"
                                        target="_blank"
                                        rel="noreferrer noopener"
                                        >
@@ -108,7 +108,7 @@ function lwn_recipe_config_page()
                                          'lwn-recipe'
                                        ); ?>
       </a>
-        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(YOUTUBE_LINK) ?>"
+        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(LWN_RECIPE_YOUTUBE_LINK) ?>"
                                        target="_blank"
                                        rel="noreferrer noopener"
                                        >
@@ -117,7 +117,7 @@ function lwn_recipe_config_page()
                                          'lwn-recipe'
                                        ); ?>
       </a>
-        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(GIT_CODE) ?>"
+        <a class="lwn-recipe-admin-link" href="<?php echo esc_url(LWN_RECIPE_GIT_CODE) ?>"
                                        target="_blank"
                                        rel="noreferrer noopener"
                                        >
@@ -209,13 +209,13 @@ function lwn_recipe_help_tab_3()
          'lwn-recipe'
        ); ?>
      </p>
-       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(WORDPRESS_LP) ?>" target="_blank" rel="noreferrer noopener">
+       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(LWN_RECIPE_WORDPRESS_LP) ?>" target="_blank" rel="noreferrer noopener">
        <?php _e('WordPress Development Learning Path', 'lwn-recipe'); ?>
      </a>
-       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(YOUTUBE_LINK) ?>" target="_blank" rel="noreferrer noopener">
+       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(LWN_RECIPE_YOUTUBE_LINK) ?>" target="_blank" rel="noreferrer noopener">
        <?php _e('Check Youtube Videos', 'lwn-recipe'); ?>
      </a>
-       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(GIT_CODE); ?>" target="_blank" rel="noreferrer noopener">
+       <a class="lwn-recipe-help-tab-link" href="<?php echo esc_url(LWN_RECIPE_GIT_CODE); ?>" target="_blank" rel="noreferrer noopener">
        <?php _e('Code Repo.', 'lwn-recipe'); ?>
      </a>
 
