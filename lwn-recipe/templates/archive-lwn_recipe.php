@@ -31,11 +31,11 @@
                </a>
              </h3>
              <p class="lwn-recipe-text">
-               <?php echo get_post_meta(
+               <?php esc_html_e(get_post_meta(
                  get_the_ID(),
                  'lwn_recipe_desc',
                  true
-               ); ?>
+               )); ?>
              </p>
 
            </div>
@@ -45,11 +45,11 @@
          <?php } ?>
 
          <div class="lwn-recipe-pagination">
-           <?php echo next_posts_link(
-             __('Older Recipes', 'lwn-recipe'),
+           <?php next_posts_link(
+             esc_html__('Older Recipes', 'lwn-recipe'),
              $the_recipes->max_num_pages
            ); ?>
-           <?php previous_posts_link(__('Newer Recipes', 'lwn-recipe')); ?>
+           <?php previous_posts_link(esc_html__('Newer Recipes', 'lwn-recipe')); ?>
          </div>
 
 
