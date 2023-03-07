@@ -178,7 +178,7 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
 
     <!-- Widget Input: Title -->
     <p>
-    <label for="<?php echo esc_attr_e($this->get_field_id('widget_title')); ?>">
+    <label for="<?php esc_attr_e($this->get_field_id('widget_title')); ?>">
         <?php _e('Widget Title', 'lwn-recipe'); ?> 
     </label>
     <input type="text" 
