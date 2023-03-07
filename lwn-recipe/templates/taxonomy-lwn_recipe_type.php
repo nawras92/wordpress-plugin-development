@@ -31,7 +31,7 @@
              <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title() .
   ' thumbnail'; ?>" />
            </div>
-           <div class="the_recipe_content">
+           <div class="the-recipe-content">
              <h3 class="lwn-recipe-title">
                <a class="lwn-recipe-link" href="<?php the_permalink(); ?>">
                  <?php the_title(); ?>
