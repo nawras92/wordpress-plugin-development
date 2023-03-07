@@ -10,7 +10,7 @@ function lwn_recipe_add_settings_link($links)
     admin_url('options-general.php?page=lwn-recipe-plugin')
   );
   $settings_aTag = "<a href='{$settings_url}' >";
-  $settings_aTag .= __('Settings', 'lwn-recipe');
+  $settings_aTag .= esc_html__('Settings', 'lwn-recipe');
   $settings_aTag .= '</a>';
   array_push($links, $settings_aTag);
 

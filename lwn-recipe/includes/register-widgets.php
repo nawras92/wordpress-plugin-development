@@ -13,8 +13,8 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
   {
     parent::__construct(
       'lwn_recipe_recipe_types',
-      __('Lwn Recipe Types', 'lwn_recipe'),
-      ['description' => __('Lists Lwn Recipe Types', 'lwn-recipe')]
+      esc_html__('Lwn Recipe Types', 'lwn_recipe'),
+      ['description' => esc_html__('Lists Lwn Recipe Types', 'lwn-recipe')]
     );
   }
 
@@ -24,7 +24,7 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
     $widget_title =
       isset($instance['widget_title']) && !empty($instance['widget_title'])
         ? esc_html($instance['widget_title'])
-        : __('Recipe Types', 'lwn-recipe');
+        : esc_html__('Recipe Types', 'lwn-recipe');
     $hide_empty = !empty($instance['hide_empty']) ? true : false;
     $recipe_types = get_terms([
       'taxonomy' => 'lwn_recipe_type',
@@ -59,7 +59,7 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
     $widget_title =
       isset($instance['widget_title']) && !empty($instance['widget_title'])
         ? esc_html($instance['widget_title'])
-        : __('Recipe Types', 'lwn-recipe');
+        : esc_html__('Recipe Types', 'lwn-recipe');
 
     $hide_empty = isset($instance['hide_empty'])
       ? (bool) $instance['hide_empty']
@@ -69,7 +69,7 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
     <!-- Widget Input: Title -->
     <p>
     <label for="<?php esc_attr_e($this->get_field_id('widget_title')); ?>">
-        <?php _e('Widget Title', 'lwn-recipe'); ?> 
+        <?php esc_html_e('Widget Title', 'lwn-recipe'); ?> 
     </label>
     <input type="text" 
            id="<?php esc_attr_e($this->get_field_id('widget_title')); ?>"
@@ -81,7 +81,7 @@ class Lwn_Recipe_List_Recipe_Types_Widget extends WP_Widget
     <!-- Widget Input: hide empty -->
     <p>
     <label for="<?php esc_attr_e($this->get_field_id('hide_empty')); ?>">
-        <?php _e('Hide Empty Types', 'lwn-recipe'); ?> 
+        <?php esc_html_e('Hide Empty Types', 'lwn-recipe'); ?> 
     </label>
     <input type="checkbox" 
            id="<?php esc_attr_e($this->get_field_id('hide_empty')); ?>"
@@ -112,8 +112,8 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
   {
     parent::__construct(
       'lwn_recipe_latest_recipes',
-      __('Lwn Latest Recipes', 'lwn_recipe'),
-      ['description' => __('Display Latest LWN Recipes', 'lwn-recipe')]
+      esc_html__('Lwn Latest Recipes', 'lwn_recipe'),
+      ['description' => esc_html__('Display Latest LWN Recipes', 'lwn-recipe')]
     );
   }
 
@@ -123,7 +123,7 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
     $widget_title =
       isset($instance['widget_title']) && !empty($instance['widget_title'])
         ? esc_html($instance['widget_title'])
-        : __('Recipes', 'lwn-recipe');
+        : esc_html__('Recipes', 'lwn-recipe');
 
     $number_of_recipes =
       isset($instance['number_of_recipes']) &&
@@ -167,7 +167,7 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
     $widget_title =
       isset($instance['widget_title']) && !empty($instance['widget_title'])
         ? esc_html($instance['widget_title'])
-        : __('Recipes', 'lwn-recipe');
+        : esc_html__('Recipes', 'lwn-recipe');
 
     $number_of_recipes =
       isset($instance['number_of_recipes']) &&
@@ -191,7 +191,7 @@ class Lwn_Recipe_Latest_Recipes_Widget extends WP_Widget
     <!-- Widget Input: Number of recipes -->
     <p>
     <label for="<?php esc_attr_e($this->get_field_id('number_of_recipes')); ?>">
-        <?php _e('Number of recipes', 'lwn-recipe'); ?> 
+        <?php esc_html_e('Number of recipes', 'lwn-recipe'); ?> 
     </label>
     <input type="text" 
            id="<?php esc_attr_e($this->get_field_id('number_of_recipes')); ?>"

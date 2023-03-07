@@ -6,7 +6,7 @@ function lwn_recipe_register_metabox()
 {
   add_meta_box(
     'lwn-recipe-ingredients-metabox',
-    __('Recipe Ingredients', 'lwn-recipe'),
+    esc_html__('Recipe Ingredients', 'lwn-recipe'),
     'lwn_recipe_display_recipe_ingredients_metabox',
     'lwn_recipe',
     'normal',
@@ -14,7 +14,7 @@ function lwn_recipe_register_metabox()
   );
   add_meta_box(
     'lwn-recipe-steps-metabox',
-    __('Recipe Steps', 'lwn-recipe'),
+    esc_html__('Recipe Steps', 'lwn-recipe'),
     'lwn_recipe_display_recipe_steps_metabox',
     'lwn_recipe',
     'normal',
@@ -22,7 +22,7 @@ function lwn_recipe_register_metabox()
   );
   add_meta_box(
     'lwn-recipe-metabox',
-    __('Recipe Info', 'lwn-recipe'),
+    esc_html__('Recipe Info', 'lwn-recipe'),
     'lwn_recipe_display_recipe_metabox',
     'lwn_recipe',
     'normal',
@@ -35,7 +35,7 @@ function lwn_recipe_display_recipe_steps_metabox($recipe)
 {
   wp_nonce_field('lwn_recipe_metabox_steps', 'lwn_recipe_metabox_steps_field');
   $steps = get_post_meta($recipe->ID, 'lwn_recipe_steps', true);
-  echo wp_editor(
+  wp_editor(
     wp_kses_post($steps),
     'lwn-recipe-steps-editor',
     $settings = ['textarea_name' => 'lwn_recipe_steps']
@@ -49,7 +49,7 @@ function lwn_recipe_display_recipe_ingredients_metabox($recipe)
     'lwn_recipe_metabox_ingredients_field'
   );
   $ingredients = get_post_meta($recipe->ID, 'lwn_recipe_ingredients', true);
-  echo wp_editor(
+  wp_editor(
     wp_kses_post($ingredients),
     'lwn-recipe-ingredients-editor',
     $settings = ['textarea_name' => 'lwn_recipe_ingredients']
@@ -76,7 +76,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '<table>';
   echo '<tr>';
   echo '<td>';
-  echo __('Short Description', 'lwn-recipe');
+  echo esc_html__('Short Description', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
@@ -88,7 +88,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '</tr>';
   echo '<tr>';
   echo '<td>';
-  echo __('Prep Time (in Minutes)', 'lwn-recipe');
+  echo esc_html__('Prep Time (in Minutes)', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
@@ -100,7 +100,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '</tr>';
   echo '<tr>';
   echo '<td>';
-  echo __('Cook Time (in Minutes)', 'lwn-recipe');
+  echo esc_html__('Cook Time (in Minutes)', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
@@ -112,7 +112,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '</tr>';
   echo '<tr>';
   echo '<td>';
-  echo __('Total Time (in Minutes)', 'lwn-recipe');
+  echo esc_html__('Total Time (in Minutes)', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
@@ -124,7 +124,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '</tr>';
   echo '<tr>';
   echo '<td>';
-  echo __('Servings', 'lwn-recipe');
+  echo esc_html__('Servings', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
@@ -136,7 +136,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '</tr>';
   echo '<tr>';
   echo '<td>';
-  echo __('Vegan?', 'lwn-recipe');
+  echo esc_html__('Vegan?', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
@@ -148,7 +148,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '</tr>';
   echo '<tr>';
   echo '<td>';
-  echo __('Meal', 'lwn-recipe');
+  echo esc_html__('Meal', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
@@ -168,7 +168,7 @@ function lwn_recipe_display_recipe_metabox($recipe)
   echo '</tr>';
   echo '<tr>';
   echo '<td>';
-  echo __('Notes', 'lwn-recipe');
+  echo esc_html__('Notes', 'lwn-recipe');
   echo '</td>';
 
   echo '<td>';
