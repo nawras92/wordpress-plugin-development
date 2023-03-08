@@ -1,6 +1,6 @@
 === LWN Recipe ===
 
-Contributors: nawras92
+Contributors: Nawras92
 Tags: recipes, restaurants, cook, kitchens, food
 Requires at least: 5.0
 Tested up to: 6.1
